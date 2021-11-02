@@ -1,0 +1,10 @@
+version: '2'
+services:
+  airprint:
+    build: ./cups/
+    devices:
+      - /dev/usb:/dev/usb
+      - /dev/bus/usb:/dev/bus/usb
+    restart: always
+    network_mode: host
+    container_name: airprint
